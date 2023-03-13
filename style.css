@@ -19,18 +19,17 @@ body > h1:first-of-type {
 
 .container {
     border: 1px solid black;
-    /* width: 960px; */
+    width: 500px;
+    height: 500px;
     display: grid;
 } 
 
-.container > div {
-    border: 1px solid black;
-    height: 30px;
-    width: 30px;
+.buttons-container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
 }
 
-/* .container > div:nth-child(16n + 1) {
-    width: 100%;
-    border: 0;
-    height: 0;
-} */
+.clear-button {
+    padding: 1rem;
+}
