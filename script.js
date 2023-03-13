@@ -14,8 +14,7 @@ const createGrid = (numberRowsColumns) => {
 
 
 
-
-
+let mouseDown = false;
 const body = document.querySelector('body');
 
 const container = document.createElement('div');
@@ -26,7 +25,17 @@ body.appendChild(container);
 createGrid(16);
 
 const square = document.querySelectorAll('.square');
-square.forEach(square => square.addEventListener("click", function (e) {
-    e.target.style.backgroundColor = '#ff5e6c';
+
+square.forEach(square => square.addEventListener("mouseover", function (e) {
+    if (mouseDown) {
+        e.target.style.backgroundColor = '#ff5e6c';
+    }
+}))
+
+document.addEventListener('mousedown', function () {
+    mouseDown = true;
 })
-)
+
+document.addEventListener('mouseup', function () {
+    mouseDown = false;
+})
